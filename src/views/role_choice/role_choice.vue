@@ -11,12 +11,15 @@
            <v-card-text class="mt-8">
              <v-select color="red-lighten-1" v-model="role" :items="roles" item-value="roleKey" item-title="roleName" label="Choose role" />
              <v-text-field color="red-lighten-1" v-model="id" label="Session ID" />
-           </v-card-text>
+
+              <LogOut @destroy="endTime"/>
+            </v-card-text>
         </v-card>
     </div>
 </template>
 
 <script>
+import LogOut from '@/components/role_based/log_out/log_out.vue'
 
 export default {
   name: 'RoleChoice',
@@ -28,7 +31,7 @@ export default {
   },
   watch: {
     role (newRole) {
-      this.$store.commit('role/setRole', newRole)
+      this.$store.commit('role/setRole', ROLES[newRole])
     }
   },
   computed: {
@@ -49,7 +52,13 @@ export default {
       const role = this.$store.getters['role/role']
       const roleKey = Object.keys(ROLES).find((roleKey) => ROLES[roleKey] === role)
       this.role = roleKey
+    },
+    endTime () {
+      console.warn('Time is start ending')
     }
+  },
+  components: {
+    LogOut
   }
 }
 

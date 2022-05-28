@@ -1,5 +1,3 @@
-import { DescriptionError } from '@/error'
-
 import listeners from './listeners.js'
 
 class EventBus {
@@ -9,10 +7,6 @@ class EventBus {
 
   emit (eventName, ...params) {
     const listener = this.listeners[eventName]
-
-    if (!listener) {
-      throw new DescriptionError(`There is no handler for event with name "${eventName}"`)
-    }
 
     this.logTrace(eventName)
     listener(params)

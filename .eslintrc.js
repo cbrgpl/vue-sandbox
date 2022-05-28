@@ -4,7 +4,9 @@ module.exports = {
     node: true
   },
   globals: {
-    eventBus: true
+    eventBus: true,
+    COLORS: true,
+    LOCAL_STORAGE_NAMES: true
   },
   extends: [
     'plugin:vue/vue3-essential',

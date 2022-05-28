@@ -6,13 +6,12 @@ import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 import registrateGlobals from '@/global'
 
+registrateGlobals()
 loadFonts()
 
 const app = createApp(App)
   .use(router)
   .use(store)
   .use(vuetify)
-
-registrateGlobals()
 
 app.mount('#app')

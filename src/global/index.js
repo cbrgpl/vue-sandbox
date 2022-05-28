@@ -1,7 +1,9 @@
-import eventBus from './eventBus'
+import eventBus from './event_bus'
 import registrateConsts from './consts'
 
-export default () => {
+const registrateGlobals = () => {
   window.eventBus = eventBus
   registrateConsts()
 }
+
+registrateGlobals()

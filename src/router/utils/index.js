@@ -1,5 +1,5 @@
-import getRoleGuard from './getRoleGuard'
-import redirectByStoreId from './redirectByStoreId'
+import getRoleGuard from './get_role_guard'
+import redirectByStoreId from './redirect_by_store_id'
 
 export default {
   getRoleGuard,

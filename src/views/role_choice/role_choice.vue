@@ -17,18 +17,17 @@
 </template>
 
 <script>
-import { ROLES } from 'consts'
 
 export default {
   name: 'RoleChoice',
   data () {
     return {
-      role: null
+      role: null,
+      id: ''
     }
   },
   watch: {
     role (newRole) {
-      console.log('watch', newRole)
       this.$store.commit('role/setRole', newRole)
     }
   },

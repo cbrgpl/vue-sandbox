@@ -10,8 +10,6 @@
 export default {
   name: 'App',
   mounted () {
-    console.log(COLORS)
-    // console.log(eventBus.emit('test', 1, '2', 'arg3', { a: 1 }))
   }
 }
 </script>

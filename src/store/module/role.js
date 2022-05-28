@@ -1,5 +1,3 @@
-import { ROLES } from 'consts'
-
 export default {
   namespaced: true,
   state: {

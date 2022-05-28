@@ -1,4 +1,4 @@
-import Empty from '@/views/Empty.vue'
+import Empty from '@/views/empty.vue'
 
 import utils from './utils'
 
@@ -11,7 +11,7 @@ export default [
   {
     path: '/role-choice',
     name: 'RoleChoice',
-    component: () => import(/* RoleChoice */ '@/views/role_choice/RoleChoice.vue')
+    component: () => import(/* RoleChoice */ '@/views/role_choice/role_choice.vue')
   },
   {
     path: '/profile',
@@ -27,13 +27,13 @@ export default [
           {
             path: '',
             name: 'ProfileMe',
-            component: () => import(/* ProfileMe */ '@/views/ProfileMe.vue'),
+            component: () => import(/* ProfileMe */ '@/views/profile_me.vue'),
             beforeEnter: utils.redirectByStoreId // TODO Merge with lower route and do component replacement by ID
           },
           {
             path: 'preview',
             name: 'ProfilePreview',
-            component: () => import(/* ProfilePreview */ '@/views/ProfilePreview.vue')
+            component: () => import(/* ProfilePreview */ '@/views/profile_preview.vue')
           }
         ]
       }
@@ -43,7 +43,7 @@ export default [
     path: '/admin-panel',
     name: 'AdminPanel',
     beforeEnter: utils.getRoleGuard(['admin']),
-    component: () => import(/* AdminPanel */ '@/views/AdminPanel.vue')
+    component: () => import(/* AdminPanel */ '@/views/admin_panel.vue')
   }
 
 ]

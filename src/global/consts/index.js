@@ -1,16 +1,13 @@
 import { DescriptionError } from '@/error'
-import deepFreeze from '@/utils/deepFreeze.js'
+import deepFreeze from '@/utils/deep_freeze.js'
 
 const consts = deepFreeze({
-  COLORS: {
-    WHITE: 'WHITE',
-    RED: 'RED',
-    GREEN: 'GREEN'
+  ROLES: {
+    ANON: 'Anonim',
+    USER: 'User',
+    ADMIN: 'Admin'
   },
-  LOCAL_STORAGE_NAMES: {
-    ACCESSOR: 'var_accessor',
-    GETTOR: 'var_gettor'
-  }
+  NO_ROLE_ACCESS_REDIRECT: 'RoleChoice'
 })
 
 export default () => {

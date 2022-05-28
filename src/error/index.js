@@ -1,4 +1,4 @@
-import DescriptionError from './descriptionError'
+import DescriptionError from './description_error'
 
 export {
   DescriptionError

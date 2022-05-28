@@ -5,8 +5,8 @@ module.exports = {
   },
   globals: {
     eventBus: true,
-    COLORS: true,
-    LOCAL_STORAGE_NAMES: true
+    ROLES: true,
+    NO_ROLE_ACCESS_REDIRECT: true
   },
   extends: [
     'plugin:vue/vue3-essential',

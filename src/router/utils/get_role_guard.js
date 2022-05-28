@@ -1,5 +1,3 @@
-import { NO_ROLE_ACCESS_REDIRECT } from '@/consts'
-
 import store from '@/store'
 
 /*

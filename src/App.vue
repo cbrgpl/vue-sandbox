@@ -7,12 +7,15 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  })
+  name: 'App'
 }
 </script>
+
+<style lang="scss">
+
+html {
+  overflow-y: auto !important;
+}
+
+</style>

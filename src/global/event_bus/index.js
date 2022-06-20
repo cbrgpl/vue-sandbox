@@ -20,6 +20,10 @@ class EventBus {
   }
 
   on (eventName, handler) {
+    if (typeof handler !== 'function') {
+      throw new TypeError('handler is not a function')
+    }
+
     if (this.#events.has(eventName)) {
       this.#events.get(eventName).push(handler)
     } else {

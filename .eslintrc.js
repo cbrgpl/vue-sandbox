@@ -4,7 +4,7 @@ module.exports = {
     node: true
   },
   globals: {
-    eventBus: true,
+    bus: true,
     ROLES: true,
     NO_ROLE_ACCESS_REDIRECT: true
   },

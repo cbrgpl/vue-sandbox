@@ -1,5 +1,5 @@
-import { DescriptionError } from '@/error'
 import deepFreeze from '@/utils/deep_freeze.js'
+import registrateGlobalNameSafely from '@/utils/registrate_global_name_safely'
 
 const consts = deepFreeze({
   ROLES: {
@@ -12,10 +12,6 @@ const consts = deepFreeze({
 
 export default () => {
   for (const prop in consts) {
-    if (!window[prop]) {
-      window[prop] = consts[prop]
-    } else {
-      throw new DescriptionError(`Global with name ${prop} already exists`)
-    }
+    registrateGlobalNameSafely(prop, consts[prop])
   }
 }

@@ -10,6 +10,13 @@
 export default {
   name: 'App',
   mounted () {
+    bus.on('test', () => this.appTest())
+  },
+  methods: {
+    appTest () {
+      console.log('app test')
+      bus.on('test', () => console.log('handler 2'))
+    }
   }
 }
 </script>

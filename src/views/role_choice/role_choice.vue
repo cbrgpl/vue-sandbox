@@ -54,7 +54,7 @@ export default {
       this.role = roleKey
     },
     endTime () {
-      console.warn('Time is start ending')
+      bus.emit('test')
     }
   },
   components: {

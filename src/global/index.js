@@ -1,8 +1,10 @@
 import eventBus from './event_bus'
 import registrateConsts from './consts'
 
+import registrateGlobalNameSafely from '@/utils/registrate_global_name_safely'
+
 const registrateGlobals = () => {
-  window.eventBus = eventBus
+  registrateGlobalNameSafely('bus', eventBus)
   registrateConsts()
 }
 
